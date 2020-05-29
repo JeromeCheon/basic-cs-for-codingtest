@@ -134,7 +134,7 @@ removeBlank(char* string){
 		}else
 			renew[j] = string[i] ;
 	}
-	free(renew) ;
+	//free(renew) ;
 	return renew ;
 }
 
@@ -156,7 +156,7 @@ getMatrix(char* filename){
 				strcpy(extract, removeBlank(buf)) ;
 				if ( vertices >= 0) {
 					if ( array == NULL ){
-					  array = (int**)malloc(sizeof(int*) * (strlen(extract))) ;
+					  array = (int**)malloc(sizeof(int*)*(strlen(extract))) ;
 					  for ( i = 0 ; i < strlen(extract)-1 ; i++)
 					  	array[i] = (int*) calloc(strlen(extract), sizeof(int)) ;
 					}
